@@ -15,12 +15,13 @@ comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
           Vorteile im Kontext der OER Idee.
 
 logo:     ./images/logo.png
+link:     ./style.css
 
 import:   https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
           https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/0.0.1/README.md
           https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.md
 
-link:     ./style.css
+
 
 translation: Deutsch  translations/German.md
 
@@ -281,7 +282,7 @@ __Beispiel für mathematische Aufgabe__
 ```
 
 ***********************************************************************
-falstrad
+
 __Beispiel für einen Lückentext__
 
 I (learn) [[  have been learning  ]] English for seven years now.
@@ -329,18 +330,49 @@ for i in range(iterations):
 
 ## Integration in OPAL
 
+Sie haben unterschiedliche MÖglichkeiten den Kurs zu verbreiten:
 
++ über Github oder einen anderen Git-Server indem Sie den Quellcode des Kurses veröffentlichen und einen Link darauf an Ihre Lernenden weitergeben
++ über eine Data-URI, die den gesamten Inhalt in einer URL kodiert (so können aber keine Bilder oder Dateien unmittelbar eingebunden werden)
++ über SCORM Pakete, die Sie in OPAL und andere LMS intrieren können. Aktuell setzt dies noch die Verwendung eines Kommandozeilentools voraus. Die Community bemüht sich gegenwärtig darum dieses in einen webbasierten Service zu überführen.
++ über die LiaScript-Integration in OPAL, die es ermöglicht, LiaScript-Kurse direkt in OPAL einzubetten und zu nutzen.
+
+Letzter Aspekt wird im Vorgehen genauer beschrieben.
+
+1. Editieren des Kurses in LiaLive-Editor
+
+   Den vorliegenden Kurs können Sie mit dem [LiaLive-Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md) bearbeiten und erweitern. Erzeugen Sie sich eine lokale Kopie im Browser, indem Sie auf `Fork` klicken.
+
+   ![](./pic/Generate_Fork.jpg)
+
+2. Arbeiten Sie am Kurs. Speichern Sie danach die letzte Version des Inhaltes lokal als ZIP-File 
+
+    ![](./pic/Provide_ZIP_file.jpg)
+
+3. Legen Sie in Ihrem OPAL-Kurs einen neuen Kursabschnitt an und fügen Sie eine neue `Einzelne Seite` hinzu.
+
+    ![](./pic/Add_single_page.jpg)
+
+4. Laden Sie unter dem Reiter `Seiteninhalt` die ZIP-Datei in den Abschnitt hoch.
+
+    ![](./pic/Add_zip_file.jpg)
+
+5. Wählen Sie die zugehörige `.md` Datei aus, die Sie im Schritt 2 erstellt haben. Diese Datei wird als Startseite des LiaScript-Kurses verwendet.
+
+    ![](./pic/Reference_File.jpg)
+
+6. Öffnen Sie den Reitern nach einem Speicher nochmals und konfigurieren Sie die Einstellungen zur Seitenhöhe. Ggf. muss hier etwas nachkorrigert werden. 
+
+    ![](./pic/Adapt_Size.jpg)
+
+7. Speichern Sie die Seite und veröffentlichen Sie den Kursabschnitt.
+
+    ![](./pic/Ready.jpg)
+
+> Gratulation! Sie haben erfolgreich einen LiaScript-Kurs in OPAL eingebettet. Ihre Lernenden können nun interaktive Inhalte direkt in OPAL nutzen.
 
 ## Fazit
 
-
-LiaScript löst den Inhalt vom LMS und erlaubt die Anwendung von Methoden der verteilten Softwareentwicklung.
-
-- Beschreibungssprache
-- Verteilte Entwicklung
-- Serverlose Infrastruktur
-- Dynamische Inhalte
-
+> Den vorliegenden Kurs können Sie mit dem [LiaLive-Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md) bearbeiten und erweitern. Der Editor ist eine Webanwendung, die auf dem LiaScript Interpreter basiert und es ermöglicht, interaktive Lehrinhalte zu erstellen und zu veröffentlichen.
 
 Weitere Informationen finden Sie unter der Projektwebseite [https://liascript.github.io/](https://liascript.github.io/) in der [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1) oder dem [Youtube-Channel](https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg)
-
