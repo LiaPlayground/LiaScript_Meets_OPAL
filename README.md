@@ -183,7 +183,7 @@ Durch die Trennung von Inhalt und Darstellung können Lernende in die Entwicklun
 
 Das Video zeigt die Zusammenarbeit verschiedener Lehrender und Lernender im Kontext der Infomatiklehre in Freiberg über mehrere Jahre. 
 
-??[Video Studierende](./pic/Student_as_Coauthors.mp4)<!--autoplay="true"-->
+!?[Video Studierende](./pic/Student_as_Coauthors.mp4)<!--autoplay="true"-->
 
 *******************************************************
 
