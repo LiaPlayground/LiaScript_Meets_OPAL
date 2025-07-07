@@ -3,7 +3,7 @@ author:   Sebastian Zug, André Dietrich
 
 email:    Sebastian.Zug@informatik.tu-freiberg.de
 
-version:  0.0.3
+version:  0.0.4
 
 language: de
 
@@ -88,8 +88,6 @@ LiaScript wird als __Beschreibungssprache__ für __interaktive Lehr-Lern-Inhalte
 
 Daraus resulieren vier Kernkonzepte:
 
-
-{{1-5}}
 > __1. Wir trennen Darstellung und Inhalt! Alle Elemente werden soweit wie möglich durch eine rein textuelle Repräsentation ausgedrückt.__
 
                         {{1-2}}
@@ -116,19 +114,17 @@ Die Inhalte eines Textdokuments, das Elemente der Beschreibungssprache Markdown 
 
 *******************************************************
 
-{{2-5}}
 > __2. Lehre lebt von Interaktion!__
 
                         {{2-3}}
 *******************************************************
 
-Ändern Sie die Sortierreihenfolge innerhalb der Tabelle, illustrieren Sie die Aussage anhand des intelligenten Diagrammgenerator und lösen Sie das Quiz.
+Ändern Sie die Sortierreihenfolge innerhalb der Tabelle, illustrieren Sie die Aussage anhand des intelligenten Diagrammgenerator (Button "Line Chart") und lösen Sie das Quiz.
 
 
 ``` markdown @embed.style(height: 500px; width: 100%)
 # Tabellen als Grafiken
 
-<!-- data-show="true" -->
 | X | B(y) | C(y) |
 |---|:----:|:----:|
 | 1 |   2  |   3  |
@@ -145,7 +141,6 @@ Wann wurde die TU Bergakademie gegründet?
 
 *******************************************************
 
-{{3-5}}
 > __3. Der Browser kann viel mehr als Webseiten anzuzeigen.__
 
 
@@ -179,17 +174,16 @@ A2B2 | c4c4c4B2c2 | d4B3BB4A4 | G8F8 | G4e4d4c2A2 | B8A8 | G8z8
 
 *******************************************************
 
-{{4-5}}
 > __4. Vorlesungen als OER kollaborativ entwickeln.__
 
-                        {{3-4}}
+                        {{4-5}}
 *******************************************************
 
 Durch die Trennung von Inhalt und Darstellung können Lernende in die Entwicklung von Lehrinhalten eingebunden werden. Dies motiviert Studierende zusätzlich und förder die Identifikation mit der Lehrveranstaltung.
 
 Das Video zeigt die Zusammenarbeit verschiedener Lehrender und Lernender im Kontext der Infomatiklehre in Freiberg über mehrere Jahre. 
 
-!?[](./pic/Student_as_Coauthors.mp4)
+??[Video Studierende](./pic/Student_as_Coauthors.mp4)<!--autoplay="true"-->
 
 *******************************************************
 
@@ -271,12 +265,12 @@ Die Beschreibung der Aufgabenformate findet sich in der Dokumentation im Abschni
 <!-- class="reference" -->
 > Ihr Browser unterstützt nativ die Ausführung von JavaScript Code. LiaScript erweitert mit einem Coderunner-Server diese Möglichkeit auf aktuell 38 Programmiersprachen. Die Ausführung erfolgt serverseitig und die Ergebnisse werden im Browser angezeigt.
 
-Führen Sie den Code mit dem kleinen Symbol unter dem Beispiel aus ... oha, es gibt einen Fehler. Korrigeren Sie den Code.
+Führen Sie den Code mit dem kleinen Symbol unter dem Beispiel aus ... oha, es gibt einen Fehler. Korrigeren Sie den Code!
 
-```python
+```python     BuggyCode.py
 print("Geben Sie die Anzahl der Iterationen an:")
 iterations = input()
-for i in range(int(iterations)):
+for i in range(iterations):
     print("Hallo Welt", i)
 ```
 @LIA.python3
@@ -292,6 +286,7 @@ Sie haben unterschiedliche MÖglichkeiten den Kurs zu verbreiten:
 
 Letzter Aspekt wird im Vorgehen genauer beschrieben.
 
+<!-- class="reference" -->
 0. Um sich den Code zu diesem Code anzusehen, klicken Sie oben rechts auf das Icon Editor oder öffne sie den vorliegenden Kurs über folgenden Link [LiaLive-Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md) um ihn zu bearbeiten und zu erweitern.
 
    ![Öffnen des Editors](./pic/edit.png)
@@ -328,6 +323,8 @@ Letzter Aspekt wird im Vorgehen genauer beschrieben.
 
 ## Fazit
 
-> Den vorliegenden Kurs können Sie mit dem [LiaLive-Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md) bearbeiten und erweitern. Der Editor ist eine Webanwendung, die auf dem LiaScript Interpreter basiert und es ermöglicht, interaktive Lehrinhalte zu erstellen und zu veröffentlichen.
+Weitere Informationen zu LiaScript finden Sie unter der Projektwebseite [https://liascript.github.io/](https://liascript.github.io/) in der [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1) oder dem [Youtube-Channel](https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg)
 
-Weitere Informationen finden Sie unter der Projektwebseite [https://liascript.github.io/](https://liascript.github.io/) in der [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1) oder dem [Youtube-Channel](https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg)
+> Auf Ihre Fragen und Anregungen freuen sich [André Dietrich](mailto:andre.dietrich@informatik.tu-freiberg.de) und [Sebastian Zug](mailto:Sebastian.zug@informatik.tu-freiberg.de).
+>
+> Glück auf und viel Erfolg bei der Erstellung Ihrer interaktiven Lehrinhalte!
