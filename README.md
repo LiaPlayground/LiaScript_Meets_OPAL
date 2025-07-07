@@ -11,19 +11,17 @@ narrator: Deutsch Male
 
 mode:     Presentation
 
+edit:     https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md
+
 comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
           Vorteile im Kontext der OER Idee.
 
 logo:     ./images/logo.png
 link:     ./style.css
 
-import:   https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
-          https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/0.0.1/README.md
+import:   https://raw.githubusercontent.com/LiaTemplates/BeforeAndAfter/0.0.1/README.md
           https://raw.githubusercontent.com/LiaScript/CodeRunner/master/README.md
-
-
-
-translation: Deutsch  translations/German.md
+          https://raw.githubusercontent.com/LiaTemplates/LiveEdit-Embeddings/refs/heads/main/README.md
 
 @style
 .flex-container {
@@ -68,7 +66,7 @@ translation: Deutsch  translations/German.md
 ><h4>Die Integration des LiaScript Interpreters in OPAL, wurde durch die Technische Universität Chemnitz und die Technische Universität Bergakademie Freiberg ermöglicht und durch die BPS GmbH umgesetzt wurde.</h4>
 >
 > André Dietrich, Sebastian Zug
-> 
+>
 > Freiberg, Juli 2025
 
 <!-- class="flex-child" style="min-width: 250px;" -->
@@ -80,7 +78,7 @@ translation: Deutsch  translations/German.md
 
 <!-- class="reference" -->
 > Dieser Kurs gibt einen kurzen Überblick über die Konzepte von LiaScript, illustriert an Beispielen einige der Features und beschreibt die zwei Optionen für die Integration in OPAL. Sie können anhand der Buttons am unteren Bildrand oder mit den Pfeiltasten durch die Folien navigieren.
-> 
+>
 > _Der Quellcode dieses Open Source Dokuments ist unter [Link](https://github.com/SebastianZug/LiaScript_Workshop_Lehrende_an_Schulen/blob/main/Motivation.md) zu finden._
 
 
@@ -91,7 +89,6 @@ LiaScript wird als __Beschreibungssprache__ für __interaktive Lehr-Lern-Inhalte
 Daraus resulieren vier Kernkonzepte:
 
 
-
 {{1-5}}
 > __1. Wir trennen Darstellung und Inhalt! Alle Elemente werden soweit wie möglich durch eine rein textuelle Repräsentation ausgedrückt.__
 
@@ -100,21 +97,9 @@ Daraus resulieren vier Kernkonzepte:
 
 Die Inhalte eines Textdokuments, das Elemente der Beschreibungssprache Markdown aufgereift, wandelt der Browser für den Lernenden in eine entsprechende Darstellung um.
 
-<section class="flex-container">
+``` markdown @embed.style(height: 500px; width: 100%)
+# Hello World
 
-<!-- class="flex-child-liacode" style="min-width: 250px;" -->
-> ```markdown
-> Das ist ein Text mit unterschiedlichen Formatierungen. __Fett__, _kursiv_ oder ~durchgestrichen~.
-> 
-> Hier folgt nun etwas Mathematik $f(x) = x^2$ und eine Aufzählung 
-> 
-> + Punkt 1
-> + Punkt 2
-> 
->    + Punkt 2a
-> ```
-
-<!-- class="flex-child" style="min-width: 250px;" -->
 > Das ist ein Text mit unterschiedlichen Formatierungen. __Fett__, _kursiv_ oder ~durchgestrichen~.
 > 
 > Hier folgt nun etwas Mathematik $f(x) = x^2$ und eine Aufzählung 
@@ -123,8 +108,7 @@ Die Inhalte eines Textdokuments, das Elemente der Beschreibungssprache Markdown 
 > + Punkt 2
 > 
 >    + Unterpunkt 2a
-
-</section>
+```
 
 <!-- class="reference" -->
 > Das machen Markdown, Latex und HTML auch ... wo ist der Vorteil von LiaScript?
@@ -135,93 +119,62 @@ Die Inhalte eines Textdokuments, das Elemente der Beschreibungssprache Markdown 
 {{2-5}}
 > __2. Lehre lebt von Interaktion!__
 
-                        {{2-23}}
+                        {{2-3}}
 *******************************************************
 
 Ändern Sie die Sortierreihenfolge innerhalb der Tabelle, illustrieren Sie die Aussage anhand des intelligenten Diagrammgenerator und lösen Sie das Quiz.
 
-<section class="flex-container">
 
-<!-- class="flex-child-liacode" style="min-width: 250px;" -->
-> ```markdown
-> __Tabellen als Grafiken__
-> 
-> | X | B(y) | C(y) |
-> |---|:----:|:----:|
-> | 1 |   2  |   3  |
-> | 4 |   5  |   6  |
-> 
-> __Quizze__
-> 
-> Wann wurde die TU Bergakademie gegründet?
-> 
-> - [(X)] 1765
-> - [( )] 1896
-> ```
+``` markdown @embed.style(height: 500px; width: 100%)
+# Tabellen als Grafiken
 
-<!-- class="flex-child" style="min-width: 250px;" -->
-> __Tabellen als Grafiken__
-> 
-> | X | B(y) | C(y) |
-> |---|:----:|:----:|
-> | 1 |   2  |   3  |
-> | 4 |   5  |   6  |
-> 
-> __Quizze__
-> 
-> Wann wurde die TU Bergakademie gegründet?
-> 
-> - [(X)] 1765
-> - [( )] 1896
+<!-- data-show="true" -->
+| X | B(y) | C(y) |
+|---|:----:|:----:|
+| 1 |   2  |   3  |
+| 4 |   5  |   6  |
 
-</section>
+Quizze
+------
+
+Wann wurde die TU Bergakademie gegründet?
+
+- [(X)] 1765
+- [( )] 1896
+```
 
 *******************************************************
 
 {{3-5}}
 > __3. Der Browser kann viel mehr als Webseiten anzuzeigen.__
 
+
                         {{3-4}}
 *******************************************************
 
 In den vergangen Jahren entstanden aus der LiaScript-Community heraus verschiedene JavaScript-Plugins aus unterschiedlichen Wissensbereichen, die spezifische Inhalte interaktiv aufbereiten. Führen Sie die ABC Noten Notation aus - der Browser wird interpretiert und die Noten werden als Musikstück abgespielt.
 
+```` markdown @embed.style(height: 500px; width: 100%)
+<!--
+import:   https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
+-->
 
-<section class="flex-container">
+# Programmieren mit Musik
 
-<!-- class="flex-child-liacode" style="min-width: 250px;" -->
-> ````markdown
-> ``` abc
-> X:353
-> T: GLUECK AUF DER STEIGER KOEMMT
-> N: E1512
-> O: Europa, Mitteleuropa, Deutschland
-> R: Staende -, Bergmanns - Lied
-> M: 4/4
-> L: 1/16
-> K: G
-> | G8F4A4 | G8z8 | B8A4c4 | B8z4G2A2 | B4B4B4A2B2 | c4A3AA4
-> A2B2 | c4c4c4B2c2 | d4B3BB4A4 | G8F8 | G4e4d4c2A2 | B8A8 | G8z8
-> ```
-> @ABCJS.eval
-> ````
-
-<!-- class="flex-child" style="min-width: 250px;" -->
-> ``` abc
-> X:353
-> T: GLUECK AUF DER STEIGER KOEMMT
-> N: E1512
-> O: Europa, Mitteleuropa, Deutschland
-> R: Staende -, Bergmanns - Lied
-> M: 4/4
-> L: 1/16
-> K: G
-> | G8F4A4 | G8z8 | B8A4c4 | B8z4G2A2 | B4B4B4A2B2 | c4A3AA4
-> A2B2 | c4c4c4B2c2 | d4B3BB4A4 | G8F8 | G4e4d4c2A2 | B8A8 | G8z8
-> ```
-> @ABCJS.eval
-
-</section>
+``` abc
+X:353
+T: GLUECK AUF DER STEIGER KOEMMT
+N: E1512
+O: Europa, Mitteleuropa, Deutschland
+R: Staende -, Bergmanns - Lied
+M: 4/4
+L: 1/16
+K: G
+| G8F4A4 | G8z8 | B8A4c4 | B8z4G2A2 | B4B4B4A2B2 | c4A3AA4
+A2B2 | c4c4c4B2c2 | d4B3BB4A4 | G8F8 | G4e4d4c2A2 | B8A8 | G8z8
+```
+@ABCJS.eval
+````
 
 
 *******************************************************
@@ -311,7 +264,7 @@ Die Beschreibung der Aufgabenformate findet sich in der Dokumentation im Abschni
 
 ??[Familienschacht](https://sketchfab.com/3d-models/familienschacht-freiberg-germany-7c7d30506c554385a4a4321366e2e601 "sketchfab.com https://sketchfab.com/3d-models/familienschacht-freiberg-germany - https://sketchfab.com/3d-models/familienschacht-freiberg-germany")
 
-??[](https://tinyurl.com/yrt9xz6n "Paul Falstad, 8 Bit Flash ADC Wandler - https://www.falstad.com/circuit/ ")
+??[Falstad Circuit Simulation](https://tinyurl.com/yrt9xz6n "Paul Falstad, 8 Bit Flash ADC Wandler - https://www.falstad.com/circuit/ ")
 
 ### Programmierumgebungen 
 
@@ -323,7 +276,7 @@ Führen Sie den Code mit dem kleinen Symbol unter dem Beispiel aus ... oha, es g
 ```python
 print("Geben Sie die Anzahl der Iterationen an:")
 iterations = input()
-for i in range(iterations):
+for i in range(int(iterations)):
     print("Hallo Welt", i)
 ```
 @LIA.python3
@@ -339,35 +292,37 @@ Sie haben unterschiedliche MÖglichkeiten den Kurs zu verbreiten:
 
 Letzter Aspekt wird im Vorgehen genauer beschrieben.
 
-1. Editieren des Kurses in LiaLive-Editor
+0. Um sich den Code zu diesem Code anzusehen, klicken Sie oben rechts auf das Icon Editor oder öffne sie den vorliegenden Kurs über folgenden Link [LiaLive-Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md) um ihn zu bearbeiten und zu erweitern.
 
-   Den vorliegenden Kurs können Sie mit dem [LiaLive-Editor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/LiaScript_Meets_OPAL/refs/heads/main/README.md) bearbeiten und erweitern. Erzeugen Sie sich eine lokale Kopie im Browser, indem Sie auf `Fork` klicken.
+   ![Öffnen des Editors](./pic/edit.png)
 
-   ![](./pic/Generate_Fork.jpg)
+1. Erzeugen Sie sich eine lokale Kopie im Browser, indem Sie auf `Fork` klicken. Dadurch bleiben Ihre Änderungen erhalten und werden im Browser gespeichert.
 
-2. Arbeiten Sie am Kurs. Speichern Sie danach die letzte Version des Inhaltes lokal als ZIP-File 
+   ![Fork des Projektes](./pic/Generate_Fork.jpg)
 
-    ![](./pic/Provide_ZIP_file.jpg)
+2. Arbeiten Sie am Kurs. Speichern Sie danach die letzte Version des Inhaltes lokal als ZIP-File.
+
+    ![Download des eigenen Projektes](./pic/Provide_ZIP_file.jpg)
 
 3. Legen Sie in Ihrem OPAL-Kurs einen neuen Kursabschnitt an und fügen Sie eine neue `Einzelne Seite` hinzu.
 
-    ![](./pic/Add_single_page.jpg)
+    ![Einzelne Seite bei OPAL anlegen](./pic/Add_single_page.jpg)
 
 4. Laden Sie unter dem Reiter `Seiteninhalt` die ZIP-Datei in den Abschnitt hoch.
 
-    ![](./pic/Add_zip_file.jpg)
+    ![Zip-Projekt hochladen](./pic/Add_zip_file.jpg)
 
 5. Wählen Sie die zugehörige `.md` Datei aus, die Sie im Schritt 2 erstellt haben. Diese Datei wird als Startseite des LiaScript-Kurses verwendet.
 
-    ![](./pic/Reference_File.jpg)
+    ![Auswahl des Einsprungsortes](./pic/Reference_File.jpg)
 
 6. Öffnen Sie den Reitern nach einem Speicher nochmals und konfigurieren Sie die Einstellungen zur Seitenhöhe. Ggf. muss hier etwas nachkorrigert werden. 
 
-    ![](./pic/Adapt_Size.jpg)
+    ![Höhe anpassen](./pic/Adapt_Size.jpg)
 
 7. Speichern Sie die Seite und veröffentlichen Sie den Kursabschnitt.
 
-    ![](./pic/Ready.jpg)
+    ![Veröffentlichen](./pic/Ready.jpg)
 
 > Gratulation! Sie haben erfolgreich einen LiaScript-Kurs in OPAL eingebettet. Ihre Lernenden können nun interaktive Inhalte direkt in OPAL nutzen.
 
